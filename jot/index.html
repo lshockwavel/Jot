@@ -9,28 +9,119 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
   <title>jot</title>
 </head>
 
-<body data-bs-theme="light">
+<body class="bg-dark-jot">
   <!-- SECTION -->
   <header>
-    <nav class="navbar bg-codeworks text-light gap-2 px-2">
-      <img src="./assets/img/logo.png" height="45" alt="" loading="lazy">
-      <div><b>jot</b></div>
+    <nav class="navbar text-light gap-2 px-2">
+      <h1>jot..</h1>
       <div class="ms-auto" id="authstate"></div>
       </div>
     </nav>
   </header>
 
-  <main>
-
+  <main class="bg-dark-jot">
+    <div class="container-fluid">
+      <section class="row">
+        <div class="col-md-3 px-2">
+          <div class="bg-card rounded text-white p-2">
+            <div>
+              <p class="text-end" id="jot-count">4 jots</p>
+              <h5 class="text-data">Add a Jot</h5>
+            </div>
+            <form onsubmit="app.JotController.createJot(event)" class="d-flex justify-content-between gap-2">
+              <div>
+                <!-- <label for="jot-color">Color</label> -->
+                <input required type="color" value="#000000" id="color" name="color" class="form-control form-control-color" title="Choose your color">
+              </div>
+              <div>
+                <!-- <label for="jot-title">Title</label> -->
+                <input required minlength="3" maxlength="15" type="text" id="title" name="title" class="form-control" placeholder="title">
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary">Create <i class="mdi mdi-plus"></i></button>
+              </div>
+            </form>
+            <hr>
+            <section id="jot-list">
+              <!-- <div style="border-left: 5px solid #ff5733;">
+                <div class="d-flex justify-content-between">
+                  <h3>color 1</h3>
+                  <p>06/06/1996</p>
+                </div>
+                <div>
+                  <p class="text-data"> This is the body
+                    asdfaskdljfkldsjf;akldfj
+                    aslkdfjlkdsjfkafsd;jkfdkjkjdf
+                    aslkdfjlkdsjfkafsd
+                    dsf
+                    dsaf
+                    asdfaskdljfkldsjfasdf
+                    asfd
+                    asdfaskdljfkldsjfadfs
+                  </p>
+                </div>
+              </div>
+              <div style="border-left: 5px solid #ff5733;">
+                <div class="d-flex justify-content-between">
+                  <h3>color 1</h3>
+                  <p>06/06/1996</p>
+                </div>
+                <div>
+                  <p class="text-data"> This is the body
+                    asdfaskdljfkldsjf;akldfj
+                    aslkdfjlkdsjfkafsd;jkfdkjkjdf
+                    aslkdfjlkdsjfkafsd
+                    dsf
+                    dsaf
+                    asdfaskdljfkldsjfasdf
+                    asfd
+                    asdfaskdljfkldsjfadfs
+                  </p>
+                </div>
+              </div> -->
+            </section>
+          </div>
+        </div>
+        <div class="col-md-9 px-4" id="jot-content">
+          <!-- <form onsubmit="app.JotController.saveActiveJot(event)">
+            <div class="d-flex justify-content-between">
+              <div style="border-left: 5px solid #ff5733;"></div>
+              <div>
+                <div>
+                  <h2 class="text-white">Color 1</h2>
+                  <p class="text-data">Created on: 06/05/24</p>
+                  <p class="text-data">Last updated: Wednesday 6/8/23 10:34am</p>
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-danger" onclick="app.JotController.deleteActiveJot()">Delete</button>
+                <button type="submit" class="btn btn-primary">Update</button>
+              </div>
+            </div>
+            <div>
+              <img src="https://toppng.com/uploads/preview/modify-document-business-records-office-note-pencil-edit-note-icon-11563013005umvmev9gha.png" alt="Note" class="img-fluid">
+              <textarea name="body" id="jot-body" class="text-white form-control "> asdfasddfsaafsd
+                asdfaskdljfkldsjfadfs
+                ffasd
+                asdf
+              </textarea>
+            </div>
+          </form> -->
+      </div>
+      <div id="app"></div>
+    </section>
 
   </main>
 
   <footer class="text-bg-dark">
     <div class="text-center">
-      <p class="mb-0"><small>Made with <i class="mdi mdi-heart text-pink"></i> by CodeWorks</small></p>
+      <p class="mb-0"><small>Made with <i class="mdi mdi-blood-bag text-red"></i> by Dane</small></p>
     </div>
   </footer>
 

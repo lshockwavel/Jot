@@ -1,15 +1,77 @@
+:root {
+  --bg-card: #282546;
+  --bg-dark: #1F1D38;
+  --bg-textbox: #37335F;
+  --text-color: #7B89D2;
+  --text-border: #5A6FDB;
+}
+
+
 /* BASIC STYLES HERE */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 main {
   flex-grow: 1;
-  display: flex;
-  place-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* place-content: center;
+  align-items: center; */
+}
+
+.bg-dark-jot {
+  background-color: var(--bg-dark);
+  /* color: white; */
+  /* border-radius: 0.5rem; */
+  /* padding: 1rem; */
+  /* box-shadow: var(--shadow); */
+}
+
+.jot-icon-large {
+  font-size: 250px;
+  color: white;
+}
+
+.jot-card:hover {
+  background-color: #1E8DA626;
+  transition: background-color 1s ease;
+  cursor: pointer;
+  border-top-right-radius: 8px; /* Rounds the top-right corner */
+  border-bottom-right-radius: 8px; /* Rounds the bottom-right corner */
+}
+
+
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+.bg-text {
+  background-color: var(--bg-textbox);
+}
+
+.text-data {
+  color: var(--text-color);
+}
+
+textarea {
+  background-color: var(--bg-textbox) !important;
+  min-height: 50vh !important;
+  border-color: var(--text-border) !important;
+  /* color: var(--text-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: var(--shadow); */
+}
+
+#image-placeholder {
+  background: transparent;
 }
 
 #pop-toast-container {
